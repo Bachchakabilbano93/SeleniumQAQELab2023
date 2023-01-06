@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DBOperations.java&apos; to &apos;AmazonProject/src/test/java/com.amazon&apos;&#x0A;- Original project: &apos;PracClasses&apos;&#x0A;- Destination element: &apos;AmazonProject/src/test/java/com.amazon&apos;&#x0A;- Original element: &apos;com.oracle.DBOperations.java&apos;" description="Copy compilation unit" destination="=AmazonProject/src\/test\/java&lt;com.amazon" element1="/src&lt;com.oracle{DBOperations.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1672442324261" units="1" version="1.0"/>
+</session>

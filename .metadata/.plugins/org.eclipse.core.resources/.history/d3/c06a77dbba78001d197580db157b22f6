@@ -1,0 +1,18 @@
+package com.google.test;
+
+public class UnderstandingExceptions {
+
+	public static void main(String[] args) {
+		int res;
+		try {
+			res = 4/0;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(res);
+
+	}
+
+}

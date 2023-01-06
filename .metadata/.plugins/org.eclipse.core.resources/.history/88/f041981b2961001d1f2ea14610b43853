@@ -1,0 +1,17 @@
+package com.google.test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JDBCProgram {
+
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+//		Register Class
+		Class.forName("com.mysql.jdbc.Driver");
+//		Connection
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:33060/employee", "root", "root");
+		
+	}
+
+}

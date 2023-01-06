@@ -1,0 +1,18 @@
+package com.amazon;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class testamazonrun {
+	
+	static Menu BestClick;
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		BestClick = new Menu(driver);
+		BestClick.Test();
+		
+
+	}
+
+}

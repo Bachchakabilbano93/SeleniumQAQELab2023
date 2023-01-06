@@ -1,0 +1,24 @@
+package com.amazon;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AmazonOps {
+
+	static Menu Click;
+	static Products Search;
+	lstlnks
+
+	public static void main(String[] args) throws InterruptedException {
+
+		WebDriver driver = new ChromeDriver();
+		Click = new Menu(driver);
+		Click.Click_Menu();
+		Search = new Products(driver);
+		Search.Products_Flow();
+		
+		
+
+	}
+
+}

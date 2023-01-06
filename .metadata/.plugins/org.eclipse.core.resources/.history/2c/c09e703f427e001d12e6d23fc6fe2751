@@ -1,0 +1,29 @@
+package com.selenium;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HandleCheckbox {
+
+	public static void main(String[] args) {
+		String requiredfruits[] = {"melons","grapes"};
+		String URL = "http://localhost:8080/examples/jsp/checkbox/check.html";
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(URL);
+		
+		List<WebElement> lstCH = driver.findElements(By.xpath("//input[@type='checkbox']"));
+		for (WebElement ch : lstCH) {
+			
+		}
+			
+		
+		
+
+	}
+
+}

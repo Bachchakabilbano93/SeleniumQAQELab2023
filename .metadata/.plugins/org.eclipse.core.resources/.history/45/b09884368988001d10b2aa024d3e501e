@@ -1,0 +1,29 @@
+package com.amazon;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Products {
+
+	WebDriver driver;
+
+	public Products(WebDriver driver) {
+		this.driver = driver;
+	}
+	private String URL = "https://www.amazon.in/";
+	private By SearchBox = By.id("twotabsearchtextbox");
+	private By SearchButton = By.id("nav-search-submit-button");
+
+	public void Products_Flow() throws InterruptedException {
+		
+//		driver.manage().window().maximize();
+		driver.get(URL);
+		Thread.sleep(2000);
+		driver.findElement(SearchBox).click();
+		driver.findElement(SearchBox).sendKeys("Dell Laptop");
+		driver.findElement(SearchButton).click();
+
+	}
+
+}

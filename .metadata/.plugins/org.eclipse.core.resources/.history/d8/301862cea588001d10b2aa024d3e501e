@@ -1,0 +1,40 @@
+package com.amazon;
+
+import java.sql.SQLException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AmazonOps {
+
+	static Menu Click;
+	static Products Search;
+	static DBOperationsAmazon db;
+
+	public static void main(String[] args) throws InterruptedException, ClassNotFoundException, SQLException {
+
+		WebDriver driver = new ChromeDriver();
+		Click = new Menu(driver);
+		Click.Click_Menu();
+		Search = new Products(driver);
+		Search.Products_Flow();
+		Thread.sleep(3000);
+		db = new DBOperationsAmazon();
+		db.getConnection();
+//		db.AddLaptops();
+		for (int i = 0; i < Search.textList.size()-; i++) {
+			
+			String qry = "insert into Product values" + "('" + Search.textList.get(i) + "')";
+			
+			db.statement.executeUpdate(qry);
+			
+//			System.out.println(qry);
+			
+		}
+		
+		
+		
+
+	}
+
+}

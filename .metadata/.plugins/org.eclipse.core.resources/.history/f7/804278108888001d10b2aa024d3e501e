@@ -1,0 +1,25 @@
+package com.amazon;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Products {
+
+	WebDriver driver;
+
+	public Products(WebDriver driver) {
+		this.driver = driver;
+	}
+	private String URL = "https://www.amazon.in/";
+	private By 
+
+	public void Test() throws InterruptedException {
+		driver.manage().window().maximize();
+		driver.get(URL);
+		Thread.sleep(2000);
+		driver.findElement(Signinbtn).click();
+
+	}
+
+}

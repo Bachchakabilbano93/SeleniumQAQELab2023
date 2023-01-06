@@ -1,0 +1,16 @@
+package com.oracle;
+
+public class MathLib {
+	
+	int num1 = 13;
+	int num2 = 20;
+	
+	
+	public void Add() {
+		int sum = num1 + num2;
+		
+		System.out.println("Sum is "+sum);
+		
+	}
+
+}

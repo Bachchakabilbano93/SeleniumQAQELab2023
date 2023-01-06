@@ -1,0 +1,19 @@
+package com.google.test;
+
+import java.util.Scanner;
+
+public class PracWhileLoop {
+
+	public static void main(String[] args) {
+		boolean cond = true;
+		while (cond) {
+			System.out.println("Please enter a number");
+			Scanner scanner = new Scanner(System.in);
+			
+			int a = scanner.nextInt();
+			System.out.println(a);
+		}
+
+	}
+
+}

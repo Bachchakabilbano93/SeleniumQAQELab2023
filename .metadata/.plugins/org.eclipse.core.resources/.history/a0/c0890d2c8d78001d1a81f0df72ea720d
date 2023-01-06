@@ -1,0 +1,30 @@
+package com.google.test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class EmployeeTableCode {
+	
+	public void getConnection() throws ClassNotFoundException, SQLException {
+//		Register Class
+		Class.forName("com.mysql.jdbc.Driver");
+//		Connection
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee", "root", "root");
+//		Statement
+		Statement statement = conn.createStatement();
+	}
+
+	public void addEmployee(Connection conn, int eid, String name, String address) throws SQLException {
+		String qry = "insert into employee values("+eid+",'"+name+"','"+address+"')";
+		System.out.println(qry);
+		Statement statement = conn.createStatement();
+		statement.executeUpdate(qry);
+		System.out.println("Inserted record successfully");
+		
+	}
+	
+	
+
+}

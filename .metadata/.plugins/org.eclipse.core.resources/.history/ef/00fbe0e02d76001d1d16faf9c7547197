@@ -1,0 +1,14 @@
+package com.google.test;
+
+import java.sql.Connection;
+
+public class EmployeeTableCode {
+
+	public void addEmployee(Connection conn, int eid, String name, String address) {
+		String qry = "insert into employee values("+eid+",'"+name+"','"+address+"')";
+		
+	}
+	
+	
+
+}

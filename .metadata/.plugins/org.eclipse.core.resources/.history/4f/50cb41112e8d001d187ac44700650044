@@ -1,0 +1,67 @@
+package com.amazon;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DBOperationsAmazon {
+
+	
+	Connection conn;
+	Statement statement;
+	ResultSet rs;
+	List<String> DBtext = new ArrayList<String>();
+
+	public void getConnection() throws ClassNotFoundException, SQLException {
+
+		Class.forName("com.mysql.jdbc.Driver");
+
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Amazon", "root", "root");
+
+		statement = conn.createStatement();
+	}
+
+	public void AddLaptops(List<String> text) throws SQLException {
+
+		for (int i = 0; i < text.size(); i++) {
+
+			String qry = "insert into Product values" + "('" + text.get(i) + "')";
+
+//			statement.executeUpdate(qry);
+
+			System.out.println(qry);
+			
+		}
+
+		}
+		
+	public void SQLdata() throws SQLException {
+		
+		String qry = "select * from Product";
+		rs = statement.executeQuery(qry);
+		while (rs.next()) {
+			
+			DBtext.add(rs.getString(1));
+				
+			}
+			
+		
+			
+	
+
+
+		//		
+		//		
+		////		int result = statement.executeUpdate(qry);
+		//		
+		////		rs = statement.executeUpdate(qry);
+		//		
+		////		System.out.println(qry);
+		//		
+	}
+
+}

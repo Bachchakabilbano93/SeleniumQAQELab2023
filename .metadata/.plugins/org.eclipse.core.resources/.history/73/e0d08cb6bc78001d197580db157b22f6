@@ -1,0 +1,22 @@
+package com.google.test;
+
+public class UnderstandingExceptions {
+
+	public static void main(String[] args) {
+		int res;
+		try {
+			res = 4/0;
+			int a[] = {1,2,3};
+			System.out.println(a[2]);
+			
+		} catch (ArithmeticException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			System.out.println("Ohh a exception is Arithmetic");
+		}
+		
+		System.out.println("After Try Catch");
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.google.test;
+
+public class UnderstandingExceptions {
+
+	public static void main(String[] args) {
+		int res = 4/0;
+		
+		System.out.println(res);
+
+	}
+
+}
